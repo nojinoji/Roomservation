@@ -20,17 +20,7 @@
 <center>
  <jsp:include page='<%=pagefile+".jsp"%>'/>
 </center>
-  <div data-role="footer" data-position="fixed">
-    <div data-role="navbar">
-      <ul>
-        <li><a href="../index.jsp" data-icon="check" >Home</a></li>
-        <li><a href="../Reservation/main.jsp" data-icon="check">예약</a></li>
-        <li><a href="#" data-icon="check">출석</a></li>
-        <li><a href="../Setting/main.jsp" data-icon="gear" data-icon="check" class="ui-btn-active ui-state-persist">설정</a></li>
-      </ul>
-    </div>
-  </div>
-
+ 
 </div><!-- /page -->
 </body>
 </html>

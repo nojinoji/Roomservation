@@ -5,7 +5,14 @@
 <html>
 <head>
 <title>Roomservation</title> 
-  
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="../jquery.mobile-1.3.1.css" />
+   <link rel="stylesheet" type="text/css" href="../table.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+ 
 </head>
 <body>
 <div data-role="page">
@@ -16,29 +23,20 @@
     
     <%if(session.getAttribute("id")==null){
     %>
-    <a href="../Login/main.jsp" data-role="button">Login</a>
+    <a href="Login/main.jsp" data-role="button">Login</a>
     <%}else{
     %>
-    <a href="../Login/logout.jsp" data-role="button">Logout</a>
+    <a href="Login/logout.jsp" data-role="button">Logout</a>
     <%} %>
   </div><!-- /header -->
-  <div class="ui-body">
-			<h1>설정</h1>
-		</div>
+
+<div data-role="content"> 
 <br><br>
-<center>
- <jsp:include page='<%=pagefile+".jsp"%>'/>
-</center>
-  <div data-role="footer" data-position="fixed">
-    <div data-role="navbar">
-      <ul>
-        <li><a href="../index.jsp" data-icon="check" >Home</a></li>
-        <li><a href="../Reservation/main.jsp" data-icon="check">예약</a></li>
-        <li><a href="#" data-icon="check">출석</a></li>
-        <li><a href="main.jsp" data-icon="gear" data-icon="check" class="ui-btn-active ui-state-persist">설정</a></li>
-      </ul>
-    </div>
-  </div>
+	<center>
+	 <jsp:include page='<%=pagefile+".jsp"%>'/>
+	</center>
+</div>
+   
 
 </div><!-- /page -->
 </body>

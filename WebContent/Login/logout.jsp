@@ -8,7 +8,7 @@
 </head>
 <body>
 <% 
-	session.invalidate();
+	session.removeAttribute("id");
 	%>
 	<script>
 	alert("로그아웃 했습니다.");

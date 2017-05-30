@@ -18,7 +18,7 @@
             <option value="All A Project">All A Project</option>
           </select>
           <br><br><br><br> 
-					<label for="name-c">스터디 이름:</label>
+					<label for="name-c">스터디 이름:</label><br>
 					<input id="stu_name" name="stu_name" type="text" />
 					<br><br><br>
 					<label for="name-c">스터디 멤버 1:</label>

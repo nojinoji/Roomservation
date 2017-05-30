@@ -20,34 +20,6 @@
        </form>
        </div>
 
-<div data-role="content"> 
-    <p>This is a <a href="#">link</a></p>    
-    <ul data-role="listview" data-inset="true">
-      <li data-role="list-divider">Divider</li>
-      <li><a href="#">Item 1</a></li>
-      <li><a href="#">Item 2</a></li>
-      <li><a href="#">Item 3</a></li>
-    </ul>
-    <label for="flip-1">Flip switch:</label>
-    <select name="flip-1" id="flip-1" data-role="slider">
-      <option value="off">Off</option>
-      <option value="on">On</option>
-    </select> 
-    <a href="#" data-role="button">Click me</a>
-    <fieldset data-role="controlgroup">
-      <legend>Choose a pet:</legend>
-      <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
-      <label for="radio-choice-1">Cat</label>
-
-      <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
-      <label for="radio-choice-2">Dog</label>
-
-      <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3"  />
-      <label for="radio-choice-3">Hamster</label>
-
-      <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4"  />
-      <label for="radio-choice-4">Lizard</label>
-    </fieldset>
 
 </body>
 </body>

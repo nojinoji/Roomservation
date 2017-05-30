@@ -12,6 +12,7 @@
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
  
+ 
 </head>
 <body>
 <div data-role="page">
@@ -29,21 +30,14 @@
     <%} %>
   </div><!-- /header -->
 <br><br>
-<center>
- <img src = "images/study.PNG">
-</center>
+<div data-role="content"> 
+	<center>
+	 <img src = "images/study.PNG">
+	</center>
+</div>
 
 
-  <div data-role="footer" data-position="fixed">
-    <div data-role="navbar">
-      <ul>
-        <li><a href="index.jsp" data-icon="check" class="ui-btn-active ui-state-persist">Home</a></li>
-        <li><a href="./Reservation/main.jsp" data-icon="check">예약</a></li>
-        <li><a href="#" data-icon="check">출석</a></li>
-        <li><a href="./Setting/main.jsp" data-icon="gear">설정</a></li>
-      </ul>
-    </div>
-  </div>
+
 
 </div><!-- /page -->
 </body>

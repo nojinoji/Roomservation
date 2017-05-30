@@ -58,7 +58,7 @@ public class ReservationDB {
 			pstmt.setString(2, room);
 			pstmt.setString(3, day);
 			rs= pstmt.executeQuery();
-			if(rs.next()){//해당 아이디가 있으면 수행
+			if(rs.next()){
 				stu_num= rs.getString("stu_num");
 			}
 		}catch(Exception ex) {
@@ -81,7 +81,7 @@ public class ReservationDB {
 					"select stu_name from study where stu_num = ?");
 			pstmt.setInt(1, stu_num);
 			rs= pstmt.executeQuery();
-			if(rs.next()){//해당 아이디가 있으면 수행
+			if(rs.next()){
 				stu_name= rs.getString("stu_name");
 			}
 		}catch(Exception ex) {
