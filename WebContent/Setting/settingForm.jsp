@@ -13,8 +13,10 @@
 
 	<div data-role="fieldcontain">
 	<form>
-       <a href="main.jsp?pagefile=studyJoinForm" data-role="button">스터디 등록</a>
-       <a href="main.jsp?pagefile=myStudy" data-role="button">내 스터디</a>
+		<a href="main.jsp?pagefile=myStudy" data-role="button">내 스터디</a>
+        <a href="main.jsp?pagefile=studyJoinForm" data-role="button">스터디 등록</a>
+        <a href="main.jsp?pagefile=studyReport" data-role="button">스터디 일지</a>
+       
        </form>
        </div>
   <div data-role="content"> 

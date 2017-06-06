@@ -83,6 +83,56 @@ public class AdminDBBean {
 
 	}
 	
+	public void deleteMember(String mem_id){
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		boolean flag= false;
+		try {
+			conn = getConnection();
+			
+			pstmt = conn.prepareStatement("delete from member where mem_id=?");
+			pstmt.setString(1, mem_id);
+			
+			if (pstmt.executeUpdate() == 1)
+				flag = true;
+			
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
+			if (conn != null) try { conn.close(); } catch(SQLException ex) {}
+		}
+		
+		
+	}
+	
+	public void updateMember(String mem_id, String mem_name, String mem_snum, String mem_bir, String mem_phone){
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		boolean flag= false;
+		try {
+			conn = getConnection();
+			
+			pstmt = conn.prepareStatement("update member set  mem_name=?, mem_snum=?, mem_bir=?, mem_phone= ? where mem_id =?");
+			pstmt.setString(1, mem_name);
+			pstmt.setString(2, mem_snum);
+			pstmt.setString(3, mem_bir);
+			pstmt.setString(4, mem_phone);
+			pstmt.setString(5, mem_id);
+			
+			if (pstmt.executeUpdate() == 1)
+				flag = true;
+			
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
+			if (conn != null) try { conn.close(); } catch(SQLException ex) {}
+		}
+		
+		
+	}
+	
 	public ArrayList<ReservationDataBean> selectReservation(){
 		ArrayList<ReservationDataBean> list = new ArrayList<ReservationDataBean>();
 		
@@ -92,13 +142,14 @@ public class AdminDBBean {
 		String study= "";
 		try {
 			conn = getConnection();
-			pstmt = conn.prepareStatement("select stu_num, res_time, res_day from reservation");
+			pstmt = conn.prepareStatement("select stu_num, res_time, res_day, res_room from reservation");
 			rs= pstmt.executeQuery();
 			while(rs.next()){
 				ReservationDataBean reservation = new ReservationDataBean();  
 				reservation.setStu_num(rs.getInt("stu_num"));
 				reservation.setRes_time(rs.getInt("res_time"));
 				reservation.setRes_day(rs.getString("res_day"));
+				reservation.setRes_room(rs.getString("res_room"));
 				
 				list.add(reservation);
 			}
@@ -111,6 +162,31 @@ public class AdminDBBean {
 		
 		return list;
 
+	}
+	
+	public void deleteReservation(String res_room, String res_time, String res_day){
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		boolean flag= false;
+		try {
+			conn = getConnection();
+			
+			pstmt = conn.prepareStatement("delete from reservation where res_room=? and res_time=? and res_day=?");
+			pstmt.setString(1, res_room);
+			pstmt.setString(2, res_time);
+			pstmt.setString(3, res_day);
+			
+			if (pstmt.executeUpdate() == 1)
+				flag = true;
+			
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
+			if (conn != null) try { conn.close(); } catch(SQLException ex) {}
+		}
+		
+		
 	}
 	
 	public ArrayList<CheckDataBean> selectCheck(){
@@ -145,3 +221,4 @@ public class AdminDBBean {
 	}
 	
 }
+

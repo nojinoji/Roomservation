@@ -10,8 +10,10 @@
 
 <%
 	for(int i = 0; i<5; i++){
-	session.removeAttribute("day"+i); 
-	} 
+	session.removeAttribute("day"+i);
+	System.out.println(session.getAttribute("day"+i));
+	}
+
 %>
 
 <script type="text/javascript">

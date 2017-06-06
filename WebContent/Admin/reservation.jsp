@@ -19,6 +19,8 @@
 		<tr class="danger">
 			<th width="200">스터디 이름</th>
 			<th width="200">예약 시간</th>
+			<th width="200">방 번호</th>
+			<th width="200">삭제</th>
 		</tr>
 		<%
 			for(int i =0 ; i<list.size(); i++){
@@ -27,6 +29,8 @@
 			<tr >
 				<td><%= manager.CheckStudy(rdb.getStu_num()) %></td>
 				<td><%= rdb.getRes_time() %></td>
+				<td><%= rdb.getRes_room() %>번 방</td>
+				<td><INPUT type="button" value="삭제" onClick="location.href='deleteReservation.jsp?res_room=<%=rdb.getRes_room()%>&res_time=<%=rdb.getRes_time()%>&res_day=<%=rdb.getRes_day()%>'"></td>
 			</tr>
 		<%
 			}
@@ -39,6 +43,8 @@
 		<tr class="danger">
 			<th width="200">스터디 이름</th>
 			<th width="200">예약 시간</th>
+			<th width="200">방 번호</th>
+			<th width="200">삭제</th>
 		</tr>
 		<%
 			for(int i =0 ; i<list.size(); i++){
@@ -47,6 +53,8 @@
 			<tr >
 				<td><%= manager.CheckStudy(rdb.getStu_num()) %></td>
 				<td><%= rdb.getRes_time() %></td>
+				<td><%= rdb.getRes_room() %>번 방</td>
+				<td><INPUT type="button" value="삭제" onClick="location.href='deleteReservation.jsp?res_room=<%=rdb.getRes_room()%>&res_time=<%=rdb.getRes_time()%>&res_day=<%=rdb.getRes_day()%>'"></td>
 			</tr>
 		<%
 			}
@@ -59,6 +67,8 @@
 		<tr class="danger">
 			<th width="200">스터디 이름</th>
 			<th width="200">예약 시간</th>
+			<th width="200">방 번호</th>
+			<th width="200">삭제</th>
 		</tr>
 		<%
 			for(int i =0 ; i<list.size(); i++){
@@ -67,6 +77,8 @@
 			<tr >
 				<td><%= manager.CheckStudy(rdb.getStu_num()) %></td>
 				<td><%= rdb.getRes_time() %></td>
+				<td><%= rdb.getRes_room() %>번 방</td>
+				<td><INPUT type="button" value="삭제" onClick="location.href='deleteReservation.jsp?res_room=<%=rdb.getRes_room()%>&res_time=<%=rdb.getRes_time()%>&res_day=<%=rdb.getRes_day()%>'"></td>
 			</tr>
 		<%
 			}
@@ -79,6 +91,8 @@
 		<tr class="danger">
 			<th width="200">스터디 이름</th>
 			<th width="200">예약 시간</th>
+			<th width="200">방 번호</th>
+			<th width="200">삭제</th>
 		</tr>
 		<%
 			for(int i =0 ; i<list.size(); i++){
@@ -87,6 +101,8 @@
 			<tr >
 				<td><%= manager.CheckStudy(rdb.getStu_num()) %></td>
 				<td><%= rdb.getRes_time() %></td>
+				<td><%= rdb.getRes_room() %>번 방</td>
+				<td><INPUT type="button" value="삭제" onClick="location.href='deleteReservation.jsp?res_room=<%=rdb.getRes_room()%>&res_time=<%=rdb.getRes_time()%>&res_day=<%=rdb.getRes_day()%>'"></td>
 			</tr>
 		<%
 			}
@@ -99,6 +115,8 @@
 		<tr class="danger">
 			<th width="200">스터디 이름</th>
 			<th width="200">예약 시간</th>
+			<th width="200">방 번호</th>
+			<th width="200">삭제</th>
 		</tr>
 		<%
 			for(int i =0 ; i<list.size(); i++){
@@ -107,6 +125,8 @@
 			<tr >
 				<td><%= manager.CheckStudy(rdb.getStu_num()) %></td>
 				<td><%= rdb.getRes_time() %></td>
+				<td><%= rdb.getRes_room() %>번 방</td>
+				<td><INPUT type="button" value="삭제" onClick="location.href='deleteReservation.jsp?res_room=<%=rdb.getRes_room()%>&res_time=<%=rdb.getRes_time()%>&res_day=<%=rdb.getRes_day()%>'"></td>
 			</tr>
 		<%
 			}

@@ -12,11 +12,28 @@
 
 	<div data-role="fieldcontain">
 	<form>
-       <a href="main.jsp?pagefile=reservationMonday" data-role="button">월요일</a>
-       <a href="main.jsp?pagefile=reservationTuesday" data-role="button">화요일</a>
-       <a href="main.jsp?pagefile=reservationWednesday" data-role="button">수요일</a>
-       <a href="main.jsp?pagefile=reservationThursday" data-role="button">목요일</a>
-       <a href="main.jsp?pagefile=reservationFriday" data-role="button">금요일</a>
+	
+	<%if(session.getAttribute("day0")==null){ %>
+	<a href="main.jsp?pagefile=reservationMonday" data-role="button">월요일</a>
+       <%}else{ %>
+       <%} %>
+    <%if(session.getAttribute("day1")==null){ %>
+    <a href="main.jsp?pagefile=reservationTuesday" data-role="button">화요일</a>
+       <%}else{ %>
+       <%} %>
+    <%if(session.getAttribute("day2")==null){ %>
+    <a href="main.jsp?pagefile=reservationwednesday" data-role="button">수요일</a>
+       <%}else{ %>
+       <%} %>
+       <%if(session.getAttribute("day3")==null){ %>
+    <a href="main.jsp?pagefile=reservationThursday" data-role="button">목요일</a>
+       <%}else{ %>
+       <%} %>
+       <%if(session.getAttribute("day4")==null){ %>
+    <a href="main.jsp?pagefile=reservationFriday" data-role="button">금요일</a>
+       <%}else{ %>
+       <%} %>
+       
        </form>
        </div>
 

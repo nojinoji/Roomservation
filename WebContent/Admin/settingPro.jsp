@@ -8,14 +8,35 @@
 </head>
 <body>
 	<%String[] day = request.getParameterValues("day");
+	
 
-for(int i =0 ; i<day.length; i++){
+	
 
-	if(!day[i].equals("")){
-		session.setAttribute("day"+i, "day");
+	for(int i =0; i<day.length; i++){
+		if(day[i].equals("monday")){
+			session.setAttribute("day0", "day");
+		}if(day[i].equals("tuesday")){
+			session.setAttribute("day1", "day");
+		}if(day[i].equals("wednesday")){
+			session.setAttribute("day2", "day");	
+		}if(day[i].equals("thursday")){
+			session.setAttribute("day3", "day");	
+		}if(day[i].equals("friday")){
+			session.setAttribute("day4", "day");	
+		}
 	}
-	System.out.println(session.getAttribute("day"+i));
-}
+
+	
+	System.out.println(session.getAttribute("day0"));
+	System.out.println(session.getAttribute("day1"));
+	System.out.println(session.getAttribute("day2"));
+	System.out.println(session.getAttribute("day3"));
+	System.out.println(session.getAttribute("day4"));
+	
+
 %>
+<script type="text/javascript">
+location.href="main.jsp?pagefile=setting";
+</script>
 </body>
 </html>

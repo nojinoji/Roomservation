@@ -4,7 +4,14 @@ public class ReservationDataBean {
 	private int stu_num;
 	private int res_time;
 	private String res_day;
+	private String res_room;
 	
+	public String getRes_room() {
+		return res_room;
+	}
+	public void setRes_room(String res_room) {
+		this.res_room = res_room;
+	}
 	public String getRes_day() {
 		return res_day;
 	}

@@ -23,26 +23,30 @@
 			<th width="200">회원 생년월일</th>
 			<th width="200">핸드폰 번호</th>
 			<th width="200">스터디</th>
-			<th width="200">변경</th>
+			<th width="200">비 고</th>
 		</tr>
 		<%
 			for(int i =0 ; i<list.size(); i++){
 				MemberDataBean mdb = list.get(i);	
 		%>
-		<form action = memberPro.jsp>
+		
 			<tr >
-				<td><input type="text" name="mem_id" value=<%= mdb.getMem_id()  %> size="10"></td>
-				<td><input type="text" name="mem_name" value=<%= mdb.getMem_name() %> size="15"></td>
-				<td><input type="text" name="mem_snum" value=<%= mdb.getMem_snum() %> size="15"></td>
-				<td><input type="text" name="mem_bir" value=<%= mdb.getMem_bir() %> size="15" ></td>  
-				<td><input type="text" name="mem_phone" value=<%= mdb.getMem_phone() %> size="15"></td>
+				
+				<td><%= mdb.getMem_id()  %></td>
+				<td><%= mdb.getMem_name() %> </td>
+				<td><%= mdb.getMem_snum() %></td>
+				<td><%= mdb.getMem_bir() %></td>  
+				<td><%= mdb.getMem_phone() %></td>
 				<td><%= manager.CheckStudy(mdb.getStu_num()) %> </td>
-				<td><input type="submit" value ="변경"> </td>
+				<td>
+				<INPUT type="button" value="수정" onClick="location.href='modifyForm.jsp?mem_id=<%=mdb.getMem_id()%>'">
+				<INPUT type="button" value="삭제" onClick="location.href='deleteMember.jsp?mem_id=<%=mdb.getMem_id()%>'">
+				</td>
 			</tr>
 		<%
 			}
 		%>
-		</form>
+		
 	</table>
 
 </body>

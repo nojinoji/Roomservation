@@ -17,7 +17,7 @@
 			<br>
 			
 			<input type="checkBOX" name="day" value="monday"> 월요일 &nbsp &nbsp
-			<input type="checkBOX" name="day" value="teusday"> 화요일 &nbsp &nbsp
+			<input type="checkBOX" name="day" value="tuesday"> 화요일 &nbsp &nbsp
 			<input type="checkBOX" name="day" value="wednesday"> 수요일 &nbsp &nbsp
 			<input type="checkBOX" name="day" value="thursday"> 목요일 &nbsp &nbsp
 			<input type="checkBOX" name="day" value="friday"> 금요일 &nbsp&nbsp
