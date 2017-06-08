@@ -7,7 +7,12 @@ String pagefile=request.getParameter("pagefile");
 if(pagefile==null){
 pagefile="adminIndex";
 }
+ 
+
 %>
 <jsp:forward page="template.jsp">
 <jsp:param name="pagefile" value="<%=pagefile%>"/>
 </jsp:forward>
+
+
+
