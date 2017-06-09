@@ -94,4 +94,28 @@ public class ReservationDB {
 		return stu_name;
 	}
 	
+	public int checkStudy(String id){
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs= null;
+		int stu_num = 0;
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(
+					"select stu_num from member where mem_id = ?");
+			pstmt.setString(1, id);
+			rs= pstmt.executeQuery();
+			if(rs.next()){
+				stu_num= rs.getInt("stu_num");
+			}
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			if (rs != null) try { rs.close(); } catch(SQLException ex) {}
+			if (pstmt != null) try { pstmt.close(); } catch(SQLException ex) {}
+			if (conn != null) try { conn.close(); } catch(SQLException ex) {}
+		}
+		return stu_num;
+	}
+	
 }

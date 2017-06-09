@@ -9,7 +9,16 @@
   
 </head>
 
-<% ReservationDB manager = ReservationDB.getInstance();%>
+<% ReservationDB manager = ReservationDB.getInstance();
+String study = request.getParameter("study"); 
+if(study.equals("0")){
+	%>
+	<script>
+	alert("가입된 스터디가 없습니다.");
+	location="main.jsp?pagefile=reservationForm"
+	</script>
+	<%
+}%>
   <center>
 	<table class="table-style-three" width= "300" > <!-- 9시 -->
 	<thead>
